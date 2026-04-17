@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's 25th Birthday</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <!-- Confetti Library -->
+    <script src="https://jsdelivr.net"></script>
+</head>
+<body>
+
+    <div class="glass-card">
+        <p class="glow-text">You're Invited</p>
+        <h2 class="name">ALEX 25</h2>
+        <p class="sub-text">Chapter Twenty-Five Begins</p>
+
+        <div class="event-details">
+            <p>🗓 <strong>April 25, 2026</strong></p>
+            <p>⏰ <strong>07:00 PM</strong> onwards</p>
+            <p>📍 <strong>Barbeque Nation</strong>, Guntur</p>
+        </div>
+
+        <div class="map-wrapper">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d245132.95384495024!2d80.3333909!3d16.2613937!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7566b30058fd%3A0x113b9625aed2e82d!2sBarbeque%20Nation!5e0!3m2!1sen!2sin!4v1776344940476!5m2!1sen!2sin" 
+
+                width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="countdown-grid" id="timer">
+            <div class="box"><span class="val" id="days">00</span><span class="lbl">Days</span></div>
+            <div class="box"><span class="val" id="hours">00</span><span class="lbl">Hrs</span></div>
+            <div class="box"><span class="val" id="mins">00</span><span class="lbl">Min</span></div>
+            <div class="box"><span class="val" id="secs">00</span><span class="lbl">Sec</span></div>
+        </div>
+
+        <button class="rsvp-btn" id="rsvpBtn">COUNT ME IN</button>
+    </div>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>
