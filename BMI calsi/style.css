@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Keeps the moving text inside the screen */
+    position: relative;
+}
+
+/* Background Animation Logic */
+.watermark-container {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    z-index: 1;
+    transform: rotate(-15deg); /* Tilts the text for style */
+    pointer-events: none;
+    opacity: 0.04; /* Keeps it very subtle */
+}
+
+.moving-text {
+    font-size: 6rem;
+    font-weight: 900;
+    white-space: nowrap;
+    line-height: 1.2;
+    animation: slide 20s linear infinite;
+}
+
+/* Every second row moves in the opposite direction */
+.moving-text:nth-child(even) {
+    animation: slide-reverse 25s linear infinite;
+}
+
+@keyframes slide {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slide-reverse {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Calculator Card */
+.bmi-card {
+    background: rgba(118, 230, 191, 0.9);
+    backdrop-filter: blur(5px); /* Makes card pop against moving bg */
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+    z-index: 10;
+    border: 1px solid #eee;
+}
+
+.result-area {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+#result { font-weight: bold; font-size: 1.2rem; margin: 0; }
+
+#category-tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Status Colors */
+.underweight { background: #fff3cd; color: #856404; }
+.normal { background: #d4edda; color: #155724; }
+.overweight { background: #f8d7da; color: #721c24; }
+.obese { background: #333; color: #fff; }
+
+button {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background: #333;
+}
