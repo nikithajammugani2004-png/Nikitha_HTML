@@ -1,0 +1,133 @@
+:root {
+    --primary: #4776E6;
+    --secondary: #8E54E9;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --dark: #2c3e50;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Input Section */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+input {
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+    flex: 1;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(71, 118, 230, 0.1);
+}
+
+#addBtn {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#addBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(142, 84, 233, 0.3);
+}
+
+/* Table Styling */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    background-color: var(--dark);
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+th:first-child { border-radius: 10px 0 0 0; }
+th:last-child { border-radius: 0 10px 0 0; }
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    transition: 0.2s;
+}
+
+tr:hover td {
+    background-color: #f9f9ff;
+}
+
+/* Action Buttons */
+.editBtn, .deleteBtn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 3px;
+    transition: 0.2s;
+}
+
+.editBtn { background: #e3f2fd; color: #1976d2; }
+.deleteBtn { background: #ffebee; color: #c62828; }
+
+.editBtn:hover { background: #1976d2; color: white; }
+.deleteBtn:hover { background: #c62828; color: white; }
+
+/* Shake Animation for empty inputs */
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
