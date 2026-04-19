@@ -1,0 +1,117 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: #82e3dd; 
+            width: 200px;
+            padding: 35px 20px 25px 20px; 
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            position: relative; 
+        }
+
+        .beginner-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #025d9a; 
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            font-size: 0.65rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 10; 
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid #000406;
+            margin-bottom: 15px;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .name {
+            font-size: 1.4rem; 
+            font-weight: bold;
+            color: #025d9a; 
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 0.85rem;
+            color: #000a10;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: 0.3s;
+        }
+
+        .message { background-color: #025d9a; color: white; }
+        .follow { background-color: #025d9a; color: white; }
+
+        .btn:hover { opacity: 0.8; }
+
+        hr {
+            border: 0;
+            height: 2px; 
+            background: #000000;
+            margin: 15px 0;
+        }
+
+        .skills {
+            text-align:center;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #000000;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .tag {
+            background-color: #025d9a;
+            border: 1px solid #000000;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            font-weight: bold;
+        }
