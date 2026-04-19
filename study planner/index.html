@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Student Study Planner</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#tasks">My Tasks</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="home">
+    <h2>Welcome Students</h2>
+    <p>Organize your study schedule and crush your goals.</p>
+    <button onclick="scrollToSection('tasks')">Start Studying</button>
+</section>
+
+<section id="subjects">
+    <h2>Subjects</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Mathematics</h3>
+            <p>Algebra, Calculus, and Logic.</p>
+        </div>
+        <div class="card">
+            <h3>Computer Science</h3>
+            <p>Programming and Algorithms.</p>
+        </div>
+        <div class="card">
+            <h3>Electronics</h3>
+            <p>Circuits and Microprocessors.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Task Section -->
+<section id="tasks" class="task-section">
+    <h2>Today's Focus</h2>
+    <div class="todo-container">
+        <input type="text" id="taskInput" placeholder="Enter a new study task...">
+        <button id="addBtn">Add Task</button>
+        <ul id="taskList">
+            <!-- Tasks will appear here -->
+        </ul>
+    </div>
+</section>
+
+<section id="schedule">
+    <h2>Weekly Schedule</h2>
+    <table>
+        <tr><th>Day</th><th>Subject</th></tr>
+        <tr><td>Monday</td><td>Mathematics</td></tr>
+        <tr><td>Tuesday</td><td>Computer Science</td></tr>
+        <tr><td>Wednesday</td><td>Electronics</td></tr>
+        <tr><td>Thursday</td><td>Mathematics</td></tr>
+        <tr><td>Friday</td><td>Programming Practice</td></tr>
+    </table>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <textarea placeholder="Your Message"></textarea><br>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Student Study Planner</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
